@@ -1,0 +1,56 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">UP Test Automation Framework</a>
+  </nav>
+  
+  <div id="contenedor" class="container-fluid">
+    <div class="row">
+      <div id="botones" class="col-3 overflow-auto">
+        <app-test 
+          [consoleText] = "consoleText" [apiRoute] = "'test1'"
+          (onConsoleResult) = "getConsoleText($event)" (onLoading) = "getLoading($event)"
+          [title] = "'Test Case 1: Llamada telefónica'" [description] = "'Hace una llamada telefónica y finaliza la llamada'">
+        </app-test>
+
+        <app-test 
+          [consoleText] = "consoleText" [apiRoute] = "'test2'"
+          (onConsoleResult) = "getConsoleText($event)" (onLoading) = "getLoading($event)"
+          [title] = "'Test Case 2: Abrir aplicaciones'" [description] = "'Abre 3 aplicaciones distintas (Facebook, Instagram y Youtube). Requisitos: Tener instaladas dichas aplicaciones'">
+        </app-test>
+
+        <app-test 
+          [consoleText] = "consoleText" [apiRoute] = "'test3'"
+          (onConsoleResult) = "getConsoleText($event)" (onLoading) = "getLoading($event)"
+          [title] = "'Test Case 3: Instalar APK'" [description] = "'Descarga un APK e Instala la aplicación, despues hace una llamada'">
+        </app-test>
+
+        <app-test 
+          [consoleText] = "consoleText" [apiRoute] = "'test4'"
+          (onConsoleResult) = "getConsoleText($event)" (onLoading) = "getLoading($event)"
+          [title] = "'Test Case 4: 5 Llamadas'" [description] = "'Hace 5 llamadas, una después de la otra.'">
+        </app-test>
+
+        <app-test 
+          [consoleText] = "consoleText" [apiRoute] = "'test5'"
+          (onConsoleResult) = "getConsoleText($event)" (onLoading) = "getLoading($event)"
+          [title] = "'Test Case 5: Abrir aplicaciones / 5 llamadas'" [description] = "'Abre 3 aplicaciones distintas y hace 5 llamadas'">
+        </app-test>
+
+      </div>
+      <div id="resultados" class="col-9">
+        Test Results:
+        <p>
+          {{ consoleText }}
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loading" *ngIf="isLoading">
+    <h1 class="content">Running Test...</h1>
+  </div>
+  
+</div>
+
+

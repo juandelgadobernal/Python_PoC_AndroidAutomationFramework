@@ -1,0 +1,14 @@
+# pip install -r requirements.txt
+uiautomator
+pytest
+validators
+colorama
+requests
+firebase-admin
+pylint
+invoke
+git-lint
+pyyaml==4.2b1
+pycodestyle
+flask
+flask_cors
